@@ -2,78 +2,75 @@
 
 **From meaning to form. From form to system.**
 
-An independent, concept-driven graphic design **Agent Skill** for Claude Code and assistants that support SKILL.md. Build thoughtful visual identities, editorial graphics, invitations, posters and campaign systems by reasoning **before** choosing a style.
+A **task-first, concept-driven graphic design Skill** for Claude Code. Useful for invitations, posters, editorial designs, campaign assets, and identity projects **when an identity project is actually requested**.
 
-> Inspired by the broader discipline of concept-driven graphic design, including publicly discussed work from Pentagram. This project is independent and is not an official Pentagram product, endorsement, or affiliated initiative.
+This Skill helps you find a meaningful idea for a **specific design assignment**, turn it into visual form, make coherent decisions, and critique the result.
 
-## Five questions
+> An independent project informed by concept-driven design practice, including publicly documented design work. Not affiliated with or endorsed by Pentagram.
 
-| Stage | Core question | 直白一点 |
+## The five questions
+
+| Stage | Where AI often goes wrong | What we actually need |
 | --- | --- | --- |
-| **01 — Understand** | What is the real communication problem? | 搞清楚：到底要解决什么问题？ |
-| **02 — Creative Concept** | What is the one meaningful idea? | 想明白：最值得表达的一个想法是什么？ |
-| **03 — Visual Principle** | How can the idea become visible? | 想办法：怎么让想法变得看得见？ |
-| **04 — Graphic System** | What rules make the idea repeatable? | 定规则：怎么让这个视觉想法持续成立？ |
-| **05 — Design Critique** | Does every decision serve the idea? | 做判断：每个元素真的有必要吗？ |
+| **01 UNDERSTAND** | Investigate the company's deepest mission or brand truth | Understand the communication problem **of this assignment** |
+| **02 CREATIVE CONCEPT** | Define the organization's core values | Propose **a meaningful creative idea for this piece** |
+| **03 VISUAL PRINCIPLE** | Hunt for brand symbols and metaphors | Explore **typography, shapes, scale and space** |
+| **04 GRAPHIC SYSTEM** | Build a full brand identity | Define **the visual rules needed for this project** |
+| **05 DESIGN CRITIQUE** | Check corporate strategic alignment | Check **concept, composition, hierarchy, clarity and visual quality** |
 
-Seven practical actions support the five questions:
+In plain Chinese:
+
+1. 搞清楚：**这次设计**要解决什么问题？
+2. 想明白：**这张作品**最值得表达的一个想法是什么？
+3. 想办法：怎么用**字体、形状、空间**把想法表达出来？
+4. 定规则：怎么让**当前作品**的视觉语言保持一致？
+5. 做判断：概念、构图、视觉重点和美感是否成立？
+
+### The practical steps inside the framework
 
 **Research → Collect Observations → Find a Tension → Explore Visual Relationships → Sketch → Generate / Execute → Critique**
 
-**Core rule:** One meaningful idea. One primary visual mechanism. Every element earns its place.
+These are **actions within the five stages**, not a separate brand-strategy program. Context research should be limited to what helps the particular piece. Brand-system work occurs only when the user explicitly asks for it.
 
-## Installation
+## Install with Claude Code
 
-Clone this repository and copy the whole folder into Claude Code's skills directory.
+Global:
 
-Personal installation:
+```bash
+git clone https://github.com/gracege17/concept-to-form.git ~/.claude/skills/concept-to-form
+```
 
-    git clone https://github.com/gracege17/concept-to-form.git ~/.claude/skills/concept-to-form
+Within one project:
 
-Project installation (from the project's root directory):
+```bash
+mkdir -p .claude/skills
+git clone https://github.com/gracege17/concept-to-form.git .claude/skills/concept-to-form
+```
 
-    mkdir -p .claude/skills
-    git clone https://github.com/gracege17/concept-to-form.git .claude/skills/concept-to-form
+Invoke:
 
-Invoke the skill in Claude Code:
+```text
+/concept-to-form Help me design an invitation. Start with the specific communication problem, not an analysis of the organization's entire brand.
+```
 
-    /concept-to-form Help me develop three graphic concepts from this client brief. Start with research and observation. No images yet.
+## Included
 
-Or try:
+- [SKILL.md](SKILL.md) — scope rules, five stages, anti-drift checks
+- [Discovery worksheet](templates/01-discovery.md)
+- [Concept cards](templates/02-concept-cards.md)
+- [Visual exploration worksheet](templates/03-visual-explorations.md)
+- [Graphic system sheet](templates/04-visual-system.md)
+- [Critique log](templates/05-critique.md)
+- [Visual operations reference](references/visual-operations.md)
+- [Critique checklist](references/critique-checklist.md)
+- [LSC 2027 illustrative example](references/example-lsc.md)
 
-- **Discover:** Research a brief and find meaningful tensions.
-- **Translate:** Develop three distinct visual mechanisms, then black-and-white sketches.
-- **Build:** Turn a selected mechanism into a consistent graphic system.
-- **Critique:** Audit an existing design: keep, remove, change — with reasons.
-- **Iterate:** Make one focused edit while protecting approved design decisions.
+## Core rule
 
-## Files
+**One idea. One visual mechanism. Every element earns its place.**
 
-    concept-to-form/
-    ├── SKILL.md
-    ├── README.md
-    ├── LICENSE
-    ├── references/
-    │   ├── visual-operations.md
-    │   ├── critique-checklist.md
-    │   └── example-lsc.md
-    └── templates/
-        ├── 01-discovery.md
-        ├── 02-concept-cards.md
-        ├── 03-visual-explorations.md
-        ├── 04-visual-system.md
-        └── 05-critique.md
-
-## Philosophy
-
-- Research is not a Pinterest board.
-- A concept is not a color palette.
-- A visual principle is a **relationship or action**, not a random symbolic object.
-- A graphic system is a small set of repeatable rules, not extra decoration.
-- Critique diagnoses the *level* of the problem before proposing a fix.
-- When iterating, change the requested dimension and preserve the rest.
-- AI-generated mockups are not automatically production-ready files.
+An object isn't automatically a concept. Texture isn't a visual principle. A poster isn't an excuse to redesign the company.
 
 ## License
 
-MIT. See LICENSE.
+MIT; see [LICENSE](LICENSE).
